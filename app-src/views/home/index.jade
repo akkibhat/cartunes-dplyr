@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  div.search-wrap
+    h1.logo
+    form
+      input.input.search-input(placeholder="Search")
+    button.button.search-button
+      span.icon.icon-magnifier
+
+  ul.list-reset.panel-labels
+    li.panel-label-results
+      span.icon.icon-music-tone-alt
+      |  Results
+    li.panel-label-queue
+      span.icon.icon-list
+      |  Queue
+
+  div.panel.panel-results
+    ul.list-reset.tracklist.tracklist-results
+
+  div.panel.panel-queue
+    ul.list-reset.tracklist.tracklist-queue
+
+  div.controls-wrap
+    div.progress
+      span.progress-bar
+
+    div.current-track
+      img.track-cover(src='/img/nocover.png')
+
+      div.track-info
+        span.track-name
+        span.track-artist
+
+      div.current-buttons
+        button.button.button-up
+          span.icon.icon-arrow-up
+        span.track-votes 0
+        button.button.button-down
+          span.icon.icon-arrow-down

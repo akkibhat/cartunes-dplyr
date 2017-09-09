@@ -1,0 +1,70 @@
+.tracklist
+  height: 100%
+  overflow-y: scroll
+
+  li
+    border-bottom: 1px solid dw-light-grey
+    display: block
+    height: grid-line-em(2)
+    position: relative
+    text-overflow: ellipsis
+    width: 100%
+
+.tracklist-buttons
+  height: grid-line-em(2)
+  line-height: grid-line-em(2)
+  overflow: hidden
+  position: absolute
+  right: 0
+  top: 0
+
+  button
+    box-sizing: border-box
+    border-left: 1px solid dw-light-grey
+    display: block
+    float: left
+    height: grid-line-em(2)
+    line-height: grid-line-em(2)
+    width: grid-line-em(2)
+
+.tracklist-votes
+  border-left: 1px solid dw-light-grey
+  box-sizing: border-box
+  display: block
+  float: left
+  text-align: center
+  width: grid-line-em(1)
+
+.track-cover
+  display: block
+  height: grid-line-em(2)
+  left: 0
+  position: absolute
+  top: 0
+  width: grid-line-em(2)
+
+.track-name
+.track-artist
+  box-sizing: border-box
+  display: block
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  width: 100%
+
+.track-name
+  height: grid-line-em(1)
+  grid-line-padding(0 2.25)
+
+.track-artist
+  small()
+  color: dw-dark-grey
+  height: grid-line-em(1, small-size)
+  grid-line-padding(0 2.25, small-size)
+
+.panel-queue
+  .track-name
+    grid-line-padding(0 5.25 0 2.25)
+
+  .track-artist
+    grid-line-padding(0 5.25 0 2.25, small-size)

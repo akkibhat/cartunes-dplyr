@@ -1,0 +1,11 @@
+ul.list-reset.tracklist.tracklist-results
+  each track, i in tracklist.models
+    li
+      img.track-cover(src='/img/nocover.png', alt=track.get('album').name)
+      span.track-name= track.get('name')
+      // span.track-album= track.get('album').name
+      if track.get('artists')[0]
+        span.track-artist= track.get('artists')[0].name
+      div.tracklist-buttons
+        button.button.button-add
+          span.icon.icon-plus

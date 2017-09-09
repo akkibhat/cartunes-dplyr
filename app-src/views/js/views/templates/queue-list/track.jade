@@ -1,0 +1,21 @@
+mixin queue-list-track (track)
+  li
+    img.track-cover(src='/img/nocover.png', alt=track.get('album').name)
+    span.track-name= track.get('name')
+    // span.track-album= track.get('album').name
+    if track.get('artists')[0]
+      span.track-artist= track.get('artists')[0].name
+    div.tracklist-buttons
+      if 1 == track.clientVoted(clientId)
+        button.button.button-up(disabled='disabled')
+          span.icon.icon-arrow-up
+      else
+        button.button.button-up
+          span.icon.icon-arrow-up
+      span.tracklist-votes= track.get('votes') || 0
+      if -1 == track.clientVoted(clientId)
+        button.button.button-down(disabled='disabled')
+          span.icon.icon-arrow-down
+      else
+        button.button.button-down
+          span.icon.icon-arrow-down
