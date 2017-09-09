@@ -1,0 +1,30 @@
+.search-wrap
+  background-color: yellow
+  overflow: hidden
+  position: absolute
+  height: grid-line-em(2.5)
+  top: 0
+  width: 100%
+  z-index: 1
+
+  .search-button
+    height: grid-line-em(2.5)
+    position: absolute
+    right: 0
+    top: 0
+    width: grid-line-em(2.5)
+
+input.search-input::-webkit-input-placeholder
+  color: black
+input.search-input:-moz-placeholder
+  color: black
+input.search-input::-moz-placeholder
+  color: black
+input.search-input:-ms-input-placeholder
+  color: black
+
+input.search-input
+  box-sizing: border-box
+  height: grid-line-em(2.5)
+  grid-line-padding(0.75 2.5 0.75 0.75)
+  width: 100%

@@ -1,0 +1,61 @@
+.controls-wrap
+  bottom: 0
+  overflow: hidden
+  position: absolute
+  width: 100%
+  z-index: 1
+
+.progress
+  background-color: white
+  height: grid-line-em(0.25)
+
+.progress-bar
+  background-color: dw-yellow
+  display: block
+  height: 100%
+  transition: 1s width linear
+  width: 0
+
+.current-track
+  background-color: black
+  color: white
+  height: grid-line-em(2)
+  overflow: hidden
+  position: relative
+
+.current-track-label
+  display: block
+  height: 100%
+  line-height: grid-line-em(2)
+  grid-line-padding(0 1)
+
+.track-info
+  box-sizing: border-box
+  grid-line-padding(0 5.25 0 2.25)
+
+  .track-name
+  .track-artist
+    padding: 0
+
+.current-buttons
+  height: 100%
+  line-height: grid-line-em(2)
+  position: absolute
+  right: 0
+  top: 0
+
+  button
+    display: block
+    float: left
+    height: grid-line-em(2)
+    line-height: grid-line-em(2)
+    width: grid-line-em(2)
+
+  .track-votes
+    display: block
+    float: left
+    text-align: center
+    width: grid-line-em(1)
+
+  .button
+    color: white

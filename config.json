@@ -1,0 +1,10 @@
+{ "redisHost"           : "localhost"
+, "redisPort"           : 6379
+, "redisPrefix"         : "cartunes:"
+, "mopidyWebsocket"     : "ws://localhost:6680/mopidy/ws/"
+, "javascriptExtension" : ".min.js"
+, "maxQueueSize"        : 30
+, "voteLimit"           : -3
+, "port"                : 80
+, "compress"            : true
+}

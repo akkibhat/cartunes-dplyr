@@ -1,0 +1,60 @@
+/*
+*
+*  Golden Grid System (1.0) <http//goldengridsystem.com/>
+*  by Joni Korpi        <http//jonikorpi.com/>
+*  licensed under MIT     <http//opensource.org/licenses/mit-license.php>
+*
+*/
+
+
+// Important numbers
+font-size = 16
+
+grid-line = 1.5 * font-size
+grid-em = font-size * 1
+grid-column = 100% / 18
+
+grid-columns = 4
+
+// Function helpers
+grid-width-size(n, columns = grid-columns)
+  (100 * (n / columns))%
+
+grid-width(n, columns = grid-columns)
+  width grid-width-size(n, columns)
+
+grid-row()
+  grid-line-margin(0 -0.5)
+  position relative
+
+grid-cell(n, columns = grid-columns)
+  box-sizing(border-box)
+  grid-line-padding(0 0.5)
+  grid-width(n, columns)
+
+grid-font-em(size, context = grid-em)
+  (size / context) * 1em
+
+grid-line-em(lines, context = grid-em)
+  grid-font-em(lines * grid-line, context)
+
+grid-font-size(size, context = grid-em)
+  font-size grid-font-em(size, context)
+
+grid-line-height(lines, context = grid-em)
+  line-height ((lines * grid-line) / context) * 1em
+
+grid-font(size, lines, context = grid-em)
+  grid-font-size(size, context)
+  grid-line-height(lines, size)
+
+grid-line-prop(prop, lines, context = grid-em)
+  for line, i in lines
+    lines[i] = ((line * grid-line) / context) * 1em
+  {prop} lines
+
+grid-line-margin(lines, context = grid-em)
+  grid-line-prop(margin, lines, context)
+
+grid-line-padding(lines, context = grid-em)
+  grid-line-prop(padding, lines, context)
